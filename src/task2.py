@@ -88,7 +88,7 @@ class DataDrift:
             self.plot_psi_bins(expected_pct, actual_pct, col)
 
 
-org_df_path = Path("Task_2\\weather_data.csv")
-drifted_df_path = Path("Task_2\\weather_drifted_data.csv")
+org_df_path = Path("Task_2\\data\\weather_data.csv")
+drifted_df_path = Path("Task_2\\data\\weather_drifted_data.csv")
 drift = DataDrift(org_df_path, drifted_df_path)
 drift.generate_report()
