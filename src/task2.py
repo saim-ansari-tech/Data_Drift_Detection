@@ -18,7 +18,7 @@ class DataDrift:
         expected_pct = np.where(expected_pct == 0, 0.0001, expected_pct)
         actual_pct = np.where(actual_pct == 0, 0.0001, actual_pct)
         psi = np.sum(
-            (actual_pct - expected_pct) 
+            (actual_pct - expected_pct)
             * np.log(actual_pct / expected_pct)
         )
 
@@ -77,7 +77,7 @@ class DataDrift:
 
         for col in numeric_columns:
             psi, breakpoints, expected_pct, actual_pct = self.calculate_psi(
-                self.baseline_df[col], 
+                self.baseline_df[col],
                 self.current_df[col])
             print(f"Feature: {col}")
             print(f"PSI : {psi}")
